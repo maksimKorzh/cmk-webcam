@@ -43,9 +43,6 @@ while True:
     # read input webcam stream
     material, frame = capture.read()
     
-    
-    #################################
-    
     # downsample image using Gaussian pyramid
     img_color = frame
     for _ in range(num_down):
