@@ -39,8 +39,9 @@ while True:
     material, frame = capture.read()    
         
     # render webcam stream in window
-    try: cv2.imshow('Code Monkey King', frame)
-    except: pass
+    if material:
+        try: cv2.imshow('Code Monkey King', frame)
+        except Exception as e: print(e)
     
     # handle script exit
     if cv2.waitKey(1) == ord('~'):
