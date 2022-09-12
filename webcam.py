@@ -46,6 +46,11 @@ while True:
     # handle script exit
     if cv2.waitKey(1) == ord('~'):
         break
+    
+    # close window with 'X' button
+    if cv2.getWindowProperty('Code Monkey King', cv2.WND_PROP_VISIBLE) < 1:
+      break
+    
 
 # make clean up
 capture.release()
