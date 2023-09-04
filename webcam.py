@@ -20,18 +20,18 @@ import numpy as np
 capture = cv2.VideoCapture(0)
 
 # window size
-WIDTH = 320 # 160
-HEIGHT = 240 # 120
+WIDTH = 640 # 160
+HEIGHT = 480 # 120
 
 # set resolution
-capture.set(3, WIDTH) # 160
-capture.set(4, HEIGHT) # 120
+capture.set(cv2.CAP_PROP_FRAME_WIDTH, HEIGHT)
+capture.set(cv2.CAP_PROP_FRAME_HEIGHT, WIDTH)
 
 # create output window
 cv2.namedWindow('Code Monkey King', flags=cv2.WINDOW_GUI_NORMAL)
 
 # set window size
-cv2.resizeWindow('Code Monkey King', WIDTH, HEIGHT)
+cv2.resizeWindow('Code Monkey King', 1024, 768)
     
 # main loop
 while True:
